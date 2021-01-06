@@ -4,6 +4,8 @@ This repository serves as a "playground" to expose my learning using Docker to "
 ### node_js
 **node_js** is a folder containing the source code of a simple web application which should print the following gif image:
 ![Welcome Screen](congo.gif)
+
+
 To make this work with Docker, we encapsulate this application into an image built on the **DockerFile** constructor. To execute the webserver in a container, follow the steps:
 
 The `run` command look up for a cached version of the image and download it, in case necessary. The `-p 80:3000` open the PORT 80 at the host-side (e.g., local machine) and open the PORT 3000 at the node_js container. Finally, the `--rm` parameter allows to autoamatically remove the container instantiation after its execution. 
